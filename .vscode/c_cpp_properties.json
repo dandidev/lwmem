@@ -2,10 +2,10 @@
     "version": 4,
     "configurations": [
         {
-            "name": "Win32",
+            "name": "Arch_linux",
             "includePath": [
-                "${workspaceFolder}\\dev\\",
-                "${workspaceFolder}\\lwmem\\src\\include\\"
+                "${workspaceFolder}/dev/",
+                "${workspaceFolder}/lwmem/src/include/"
             ],
             "defines": [
                 "WIN32",
@@ -14,7 +14,7 @@
                 "_UNICODE",
                 "LWMEM_DEV"
             ],
-            "compilerPath": "c:\\msys64\\mingw64\\bin\\gcc.exe",
+            "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu17",
             "cppStandard": "gnu++14",
             "intelliSenseMode": "windows-gcc-x86",

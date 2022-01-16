@@ -21,8 +21,8 @@ target_sources(${PROJECT_NAME} PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}/dev/main.cpp
     ${CMAKE_CURRENT_LIST_DIR}/tests/lwmem_test.c
 
-    # win32 port
-    ${CMAKE_CURRENT_LIST_DIR}/lwmem/src/system/lwmem_sys_win32.c
+    # posix port
+    ${CMAKE_CURRENT_LIST_DIR}/lwmem/src/system/lwmem_sys_posix.c
     )
 
 # Add key include paths
@@ -52,3 +52,6 @@ target_compile_options(${PROJECT_NAME} PRIVATE
 add_subdirectory("lwmem")
 target_link_libraries(${PROJECT_NAME} lwmem)
 target_link_libraries(${PROJECT_NAME} lwmem_cpp)
+
+# Add POSIX pthread lib
+target_link_libraries(${PROJECT_NAME} pthread)
